@@ -905,5 +905,13 @@
       loadRepos();
     });
   </script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+        fetch('/api/log')
+            .then(res => console.log('Ping successfully transmitted.'))
+            .catch(err => console.error('Fetch exception caught:', err));
+    });
+</script>
+
 </body>
 </html>
