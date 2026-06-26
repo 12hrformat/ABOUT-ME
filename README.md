@@ -1,4 +1,1 @@
-
-
-Uploading saurfang-wow.1920x1080.mp4…
-
+an html file that can log ips and send to your discord webhook, just deploy it on vercel
