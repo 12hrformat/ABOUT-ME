@@ -79,7 +79,7 @@ export default async function handler(req, res) {
 
         // Replace with your webhook
         const webhookUrl =
-            "https://discordapp.com/api/webhooks/1511008810469163028/ufzEHmtZm0v_UNniiY0_zvLTqIw-GmdvXpwOkPctlLsu0ISIBqX9NttKQWeWyulzgUZa";
+            "(YOUR DISCORD WEBHOOK URL HERE)";
 
         await fetch(webhookUrl, {
             method: "POST",
